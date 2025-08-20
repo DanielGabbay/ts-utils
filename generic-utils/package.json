@@ -1,7 +1,7 @@
 {
   "name": "@ts-utils/generic-utils",
   "version": "0.0.1",
-  "description": "A modular collection of TypeScript utilities for enhanced developer productivity",
+  "description": "A modular collection of TypeScript utilities designed to enhance developer productivity with type-safe, lightweight solutions",
   "keywords": ["typescript", "utilities", "enum", "types", "type-safe"],
   "author": "Daniel Gabbay",
   "license": "MIT",
