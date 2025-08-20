@@ -1,3 +1,17 @@
+## 0.5.0 (2025-08-20)
+
+### 🚀 Features
+
+- add object path operations and property manipulation utilities ([2c0ae3e](https://github.com/DanielGabbay/ts-utils/commit/2c0ae3e))
+
+### 🩹 Fixes
+
+- correct TypeScript declarations path in package.json ([c467402](https://github.com/DanielGabbay/ts-utils/commit/c467402))
+
+### ❤️ Thank You
+
+- Daniel
+
 ## 0.4.0 (2025-08-20)
 
 ### 🚀 Features
