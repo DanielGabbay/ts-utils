@@ -7,6 +7,10 @@ on:
   push:
     branches:
       - master
+    paths-ignore:
+      - 'CHANGELOG.md'
+      - 'package.json'
+      - 'package-lock.json'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -25,18 +29,32 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
+
+      - name: Cache Nx
+        uses: actions/cache@v4
+        with:
+          path: .nx/cache
+          key: ${{ runner.os }}-nx-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-nx-
 
       - name: Install dependencies
         run: npm ci
+        timeout-minutes: 5
 
       - name: Lint
         run: npx nx run-many -t lint
+        timeout-minutes: 5
 
       - name: Type check
         run: npx nx run-many -t typecheck
+        timeout-minutes: 5
 
       - name: Test
         run: npx nx run-many -t test
+        timeout-minutes: 10
 
       - name: Build
         run: npx nx run-many -t build
+        timeout-minutes: 10
