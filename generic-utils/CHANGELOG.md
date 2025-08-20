@@ -1,3 +1,14 @@
+## 0.4.4 (2025-08-20)
+
+### 🐛 Bug Fixes
+
+- fix module resolution issues by removing development export path that references non-existing src directory ([commit])
+- ensure proper ESM and CommonJS compatibility for webpack and bundlers
+
+### ❤️ Thank You
+
+- Daniel
+
 ## 0.4.0 (2025-08-20)
 
 ### 🚀 Features

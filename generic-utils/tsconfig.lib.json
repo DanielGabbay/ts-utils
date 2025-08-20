@@ -9,7 +9,8 @@
     "module": "esnext",
     "moduleResolution": "bundler",
     "forceConsistentCasingInFileNames": true,
-    "types": ["node"]
+    "types": ["node"],
+    "declarationMap": false
   },
   "include": ["src/**/*.ts"],
   "references": [],

@@ -12,5 +12,11 @@ export * from './array-utils';
 // Function utilities
 export * from './function-utils';
 
+// Object utilities
+export * from './object-utils';
+
+// String utilities
+export * from './string-utils';
+
 // Performance utilities
 export * from './performance-utils';

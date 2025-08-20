@@ -120,9 +120,51 @@ export function createClearableMemoize<TArgs extends unknown[], TReturn>(
 } {
   const cache = new Map<string, { value: TReturn; timestamp?: number }>();
   const keyOrder: string[] = [];
-  const { keyResolver = (...args) => JSON.stringify(args) } = options;
-  
-  const memoized = memoize(fn, { ...options, keyResolver });
+  const {
+    maxSize = 100,
+    ttl,
+    strategy = 'lru',
+    keyResolver = (...args) => JSON.stringify(args)
+  } = options;
+
+  const memoized = (...args: TArgs): TReturn => {
+    const key = keyResolver(...args);
+    const cached = cache.get(key);
+
+    // Check TTL if configured
+    if (cached && ttl && cached.timestamp && Date.now() - cached.timestamp > ttl) {
+      cache.delete(key);
+      const keyIndex = keyOrder.indexOf(key);
+      if (keyIndex > -1) keyOrder.splice(keyIndex, 1);
+    } else if (cached) {
+      // Move to end for LRU
+      const keyIndex = keyOrder.indexOf(key);
+      if (keyIndex > -1) {
+        keyOrder.splice(keyIndex, 1);
+        keyOrder.push(key);
+      }
+      return cached.value;
+    }
+
+    const result = fn(...args);
+    
+    // Evict oldest if at max size
+    if (cache.size >= maxSize && !cache.has(key)) {
+      const oldestKey = keyOrder.shift();
+      if (oldestKey) cache.delete(oldestKey);
+    }
+
+    cache.set(key, { 
+      value: result, 
+      timestamp: ttl ? Date.now() : undefined 
+    });
+    
+    if (!keyOrder.includes(key)) {
+      keyOrder.push(key);
+    }
+
+    return result;
+  };
   
   return {
     memoized,

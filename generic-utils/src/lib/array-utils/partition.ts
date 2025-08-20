@@ -163,14 +163,14 @@ export function drop<T>(array: readonly T[], n: number): T[] {
  * Take n elements from the end
  */
 export function takeRight<T>(array: readonly T[], n: number): T[] {
-  return array.slice(-Math.max(0, n));
+  return n <= 0 ? [] : array.slice(-n);
 }
 
 /**
  * Drop n elements from the end
  */
 export function dropRight<T>(array: readonly T[], n: number): T[] {
-  return array.slice(0, -Math.max(0, n));
+  return n <= 0 ? array.slice() : array.slice(0, -n);
 }
 
 /**

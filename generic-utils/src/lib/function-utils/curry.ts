@@ -49,7 +49,7 @@ export function curryRight<TArgs extends readonly unknown[], TReturn>(
     if (args.length >= fn.length) {
       return fn(...(args.reverse() as unknown as TArgs));
     }
-    return (...nextArgs: unknown[]) => curried(...nextArgs, ...args);
+    return (...nextArgs: unknown[]) => curried(...args, ...nextArgs);
   };
 }
 
