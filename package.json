@@ -2,7 +2,14 @@
   "name": "@ts-utils/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "release": "nx release",
+    "release:dry-run": "nx release --dry-run", 
+    "publish": "nx release publish",
+    "build:all": "nx run-many -t build",
+    "test:all": "nx run-many -t test",
+    "lint:all": "nx run-many -t lint"
+  },
   "private": true,
   "dependencies": {},
   "devDependencies": {

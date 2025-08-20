@@ -53,7 +53,21 @@
   ],
   "release": {
     "version": {
-      "preVersionCommand": "npx nx run-many -t build"
+      "preVersionCommand": "npx nx run-many -t build",
+      "conventionalCommits": true
+    },
+    "changelog": {
+      "workspaceChangelog": {
+        "createRelease": "github"
+      },
+      "projectChangelogs": {
+        "createRelease": "github"
+      }
+    },
+    "releaseTagPattern": "v{version}",
+    "git": {
+      "commit": true,
+      "tag": true
     }
   },
   "targetDefaults": {

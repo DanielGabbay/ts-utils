@@ -44,3 +44,54 @@ Thumbs.db
 .github/instructions/nx.instructions.md
 
 test-output
+
+# Environment files (sensitive data)
+.env
+.env.local
+.env.*.local
+
+# NPM/Yarn files
+.npmrc
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
+
+# Build artifacts
+build/
+dist/
+*.tgz
+*.tar.gz
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+logs
+*.log
+
+# Development files you might want to hide
+TODO.md
+NOTES.md
+PRIVATE.md
+*.private.*
+SETUP-COMPLETE.md
+.gitignore
+SECURITY-GUIDE.md
+PUBLISHING.md
+SECURITY-INCIDENT.md

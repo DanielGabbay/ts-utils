@@ -1,0 +1,57 @@
+# Development files
+src/
+*.spec.ts
+*.test.ts
+**/*.spec.ts
+**/*.test.ts
+jest.config.*
+tsconfig.spec.json
+
+# Build configuration
+rollup.config.*
+webpack.config.*
+.swcrc
+
+# Documentation
+docs/
+*.md
+!README.md
+
+# GitHub specific
+.github/
+.gitignore
+
+# Development tools
+.eslintrc.*
+eslint.config.*
+.prettierrc.*
+.editorconfig
+
+# Environment files
+.env*
+
+# Logs and temporary files
+*.log
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-*
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# Lock files (optional - some prefer to include)
+package-lock.json
+yarn.lock
+
+# Development scripts
+scripts/
+tools/
+
+# Examples and demos (if you don't want them in the published package)
+examples/
+demo/
