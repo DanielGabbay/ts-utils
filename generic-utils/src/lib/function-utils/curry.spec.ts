@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { curry, curryN, curryRight, partial, partialWith, _, flip, unary, binary, nAry } from './curry';
 
 describe('curry', () => {

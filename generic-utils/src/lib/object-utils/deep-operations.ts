@@ -2,6 +2,12 @@
  * Deep object operations
  */
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
+/**
+ * Advanced object manipulation utilities
+ */
+
 /**
  * Deep merge multiple objects
  */

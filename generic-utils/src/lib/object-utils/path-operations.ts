@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 /**
- * Object path operations (lodash-like path syntax)
+ * Path-based object operations
  */
 
 type Path = string | (string | number)[];

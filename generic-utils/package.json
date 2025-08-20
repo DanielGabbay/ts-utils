@@ -40,5 +40,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {}
+  "dependencies": {
+    "rollup-plugin-dts": "^6.2.3"
+  },
+  "devDependencies": {
+    "rollup-plugin-dts": "^6.2.3"
+  }
 }

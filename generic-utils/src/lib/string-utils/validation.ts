@@ -86,6 +86,7 @@ export function isAlphanumeric(str: string): boolean {
  * Check if string is ASCII only
  */
 export function isAscii(str: string): boolean {
+  // eslint-disable-next-line no-control-regex
   return /^[\x00-\x7F]*$/.test(str);
 }
 
@@ -165,7 +166,7 @@ export function isMacAddress(str: string): boolean {
  */
 export function isPhoneNumber(str: string, locale?: 'US' | 'UK' | 'international'): boolean {
   const patterns = {
-    US: /^(\+1\s?)?(\([0-9]{3}\)|[0-9]{3})[\s\-]?[0-9]{3}[\s\-]?[0-9]{4}$/,
+    US: /^(\+1\s?)?(\([0-9]{3}\)|[0-9]{3})[\s-]?[0-9]{3}[\s-]?[0-9]{4}$/,
     UK: /^(\+44\s?)?(\(0\)|0)?[1-9]\d{8,9}$/,
     international: /^\+?[1-9]\d{1,14}$/
   };
@@ -175,7 +176,7 @@ export function isPhoneNumber(str: string, locale?: 'US' | 'UK' | 'international
   }
   
   // General international format
-  return patterns.international.test(str.replace(/[\s\-\(\)]/g, ''));
+  return patterns.international.test(str.replace(/[\s-()]/g, ''));
 }
 
 /**
@@ -194,7 +195,7 @@ export function isPostalCode(str: string, locale?: 'US' | 'UK' | 'CA' | 'DE'): b
   }
   
   // Generic pattern (digits and letters)
-  return /^[A-Z0-9\s\-]{3,10}$/.test(str.toUpperCase());
+  return /^[A-Z0-9\s-]{3,10}$/.test(str.toUpperCase());
 }
 
 /**

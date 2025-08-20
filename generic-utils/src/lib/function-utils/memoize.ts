@@ -123,7 +123,6 @@ export function createClearableMemoize<TArgs extends unknown[], TReturn>(
   const {
     maxSize = 100,
     ttl,
-    strategy = 'lru',
     keyResolver = (...args) => JSON.stringify(args)
   } = options;
 

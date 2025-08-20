@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 /**
- * Object property manipulation utilities
+ * Property manipulation utilities
  */
 
 /**

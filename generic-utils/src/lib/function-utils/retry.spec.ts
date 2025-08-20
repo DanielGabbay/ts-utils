@@ -188,7 +188,7 @@ describe('withTimeout', () => {
   });
 
   it('should use custom timeout message', async () => {
-    const promise = new Promise(() => {}); // Never resolves
+    const promise = new Promise(() => { /* Never resolves */ }); // Never resolves
     
     const timeoutPromise = withTimeout(promise, 1000, 'Custom timeout message');
     jest.advanceTimersByTime(1000);
