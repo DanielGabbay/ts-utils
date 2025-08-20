@@ -17,3 +17,6 @@ export * from './object-utils';
 
 // String utilities
 export * from './string-utils';
+
+// Function utilities
+export * from './function-utils';
