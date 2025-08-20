@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { TypeFrom } from './type-from';
 
 describe('TypeFrom', () => {

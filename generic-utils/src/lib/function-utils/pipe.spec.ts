@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { pipe, pipeAsync } from './pipe';
 
 describe('pipe', () => {

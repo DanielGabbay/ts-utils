@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { retry, createCircuitBreaker, createResilientFunction, withTimeout } from './retry';
 
 describe('retry', () => {

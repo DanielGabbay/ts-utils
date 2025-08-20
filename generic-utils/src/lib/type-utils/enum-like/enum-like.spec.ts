@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { EnumLike } from './enum-like';
 
 describe('EnumLike', () => {

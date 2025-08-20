@@ -251,9 +251,9 @@ export function defaultsDeep<T extends Record<string, any>>(
       if (objValue && defaultValue && 
           typeof objValue === 'object' && typeof defaultValue === 'object' &&
           !Array.isArray(objValue) && !Array.isArray(defaultValue)) {
-        result[key] = defaultsDeep(objValue, defaultValue);
+        (result as any)[key] = defaultsDeep(objValue, defaultValue);
       } else if (objValue !== undefined) {
-        result[key] = objValue;
+        (result as any)[key] = objValue;
       }
     }
   }

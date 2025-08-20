@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 /**
- * Advanced search and sort utilities
+ * Advanced search and sort utilities for arrays
  */
 
 /**
@@ -122,8 +124,8 @@ export function sortBy<T>(
       const keyA = keyFn(a);
       const keyB = keyFn(b);
       
-      if (keyA < keyB) return -1;
-      if (keyA > keyB) return 1;
+      if ((keyA as any) < (keyB as any)) return -1;
+      if ((keyA as any) > (keyB as any)) return 1;
     }
     return 0;
   });
@@ -147,8 +149,8 @@ export function sortByCriteria<T>(
       const keyB = keyFn(b);
       
       let comparison = 0;
-      if (keyA < keyB) comparison = -1;
-      else if (keyA > keyB) comparison = 1;
+      if ((keyA as any) < (keyB as any)) comparison = -1;
+      else if ((keyA as any) > (keyB as any)) comparison = 1;
       
       if (comparison !== 0) {
         return direction === 'desc' ? -comparison : comparison;

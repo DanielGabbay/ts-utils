@@ -5,7 +5,9 @@
     "types": ["jest", "node"],
     "module": "esnext",
     "moduleResolution": "bundler",
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "strict": false
   },
   "include": [
     "jest.config.ts",

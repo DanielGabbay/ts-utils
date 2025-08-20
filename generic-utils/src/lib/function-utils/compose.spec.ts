@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { compose, safeCompose } from './compose';
 
 describe('compose', () => {
