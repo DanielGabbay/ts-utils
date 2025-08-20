@@ -1,3 +1,13 @@
+## 0.4.1 (2025-08-20)
+
+### 🩹 Fixes
+
+- correct TypeScript declarations path in package.json ([1b0ef7a](https://github.com/DanielGabbay/ts-utils/commit/1b0ef7a))
+
+### ❤️ Thank You
+
+- Daniel
+
 ## 0.4.0 (2025-08-20)
 
 ### 🚀 Features
