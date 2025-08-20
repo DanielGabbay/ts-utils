@@ -1,3 +1,13 @@
+## 0.4.0 (2025-08-20)
+
+### 🚀 Features
+
+- change package name to dg-ts-toolkit ([a8efe6a](https://github.com/DanielGabbay/ts-utils/commit/a8efe6a))
+
+### ❤️ Thank You
+
+- Daniel
+
 ## 0.3.0 (2025-08-20)
 
 ### 🚀 Features
