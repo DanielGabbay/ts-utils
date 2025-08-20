@@ -41,6 +41,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Configure Git
+        run: |
+          git config --global user.name "Daniel Gabbay"
+          git config --global user.email "d9777834@gmail.com"
+
       - name: Run tests
         run: pnpm exec nx run-many -t test
 
