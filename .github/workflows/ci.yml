@@ -28,7 +28,10 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          echo "Starting npm install..."
+          npm ci --legacy-peer-deps --verbose
+          echo "npm install completed"
 
       - name: Lint
         run: npx nx run-many -t lint
