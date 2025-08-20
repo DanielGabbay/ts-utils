@@ -1,6 +1,6 @@
 {
   "name": "dg-ts-toolkit",
-  "version": "0.4.5",
+  "version": "0.5.1",
   "description": "A modular collection of TypeScript utilities designed to enhance developer productivity with type-safe, lightweight solutions",
   "keywords": [
     "typescript",
