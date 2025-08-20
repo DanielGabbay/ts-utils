@@ -1,5 +1,5 @@
 {
-  "name": "danielgabbay-ts-utils",
+  "name": "ts-utils",
   "version": "0.2.0",
   "description": "A modular collection of TypeScript utilities designed to enhance developer productivity with type-safe, lightweight solutions",
   "keywords": [
