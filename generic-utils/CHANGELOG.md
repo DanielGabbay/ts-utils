@@ -1,3 +1,13 @@
+## 0.2.0 (2025-08-20)
+
+### 🚀 Features
+
+- rename package to danielgabbay-ts-utils ([f5f8752](https://github.com/DanielGabbay/ts-utils/commit/f5f8752))
+
+### ❤️ Thank You
+
+- Daniel
+
 ## 0.1.0 (2025-08-20)
 
 ### 🚀 Features
