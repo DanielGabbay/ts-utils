@@ -1,5 +1,5 @@
 {
-  "name": "@ts-utils/generic-utils",
+  "name": "danielgabbay-ts-utils",
   "version": "0.1.0",
   "description": "A modular collection of TypeScript utilities designed to enhance developer productivity with type-safe, lightweight solutions",
   "keywords": [
